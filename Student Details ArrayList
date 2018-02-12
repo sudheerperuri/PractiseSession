@@ -1,0 +1,77 @@
+import java.util.*;
+
+public class Student implements Comparable<Student> {
+
+	String name;
+	int age;
+	String dob;
+
+	public Student(String name, int age, String dob) {
+
+		this.name = name;
+		this.age = age;
+		this.dob = dob;
+
+	}
+
+	public static void main(String[] args) {
+
+		ArrayList<Student> list = new ArrayList<Student>();
+		System.out.println("ArrayList object is created");
+		Student s1 = new Student("Ravi", 23, "19-09-1996");
+		list.add(s1);
+		Student s2 = new Student("Ganesh", 20, "19-08-1996");
+		list.add(s2);
+		Student s3 = new Student("Suresh", 24, "19-07-1995");
+		list.add(s3);
+		Student s4 = new Student("Karthik", 21, "21-07-1996");
+		list.add(s4);
+		Student s5 = new Student("Gopi", 22, "14-11-1995");
+		list.add(s5);
+
+		Collections.sort(list);
+
+		for (Student s : list) {
+			System.out.println(s);
+		}
+
+	}
+	
+	@Override
+	public int compareTo(Student s) {
+		int compareage = ((Student) s).getAge();
+		return this.age-compareage;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", age=" + age + ", dob=" + dob + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	
+
+}
