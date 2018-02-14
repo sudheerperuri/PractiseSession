@@ -1,5 +1,4 @@
 
-
 public class ChangeCase {
 
 	public static void main(String[] args) {
@@ -9,22 +8,22 @@ public class ChangeCase {
 
 		for (int i = 0; i < s1.length(); i++) {
 			char c = s1.charAt(i);
-			{
-			if (Character.isUpperCase(c)) {
-				
-				c = Character.toLowerCase(c);
-			} else if (Character.isLowerCase(c)) {
-				c = Character.toUpperCase(c);
-			} 
-		}
-			s2 = s2+c;
+			
+				if (Character.isUpperCase(c)) {
+
+					c = Character.toLowerCase(c);
+				} else if (Character.isLowerCase(c)) {
+					c = Character.toUpperCase(c);
+				}
+			
+			s2 = s2 + c;
 		}
 
 		System.out.println(s2);
 
-	
 	}
 }
+
 
 
 
